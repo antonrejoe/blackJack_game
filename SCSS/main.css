@@ -1,0 +1,339 @@
+@import url("https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap");
+body {
+  background: linear-gradient(to right, #0E2B56 30%, #150E56);
+  overflow-x: hidden;
+  font-family: "Comic Neue", cursive;
+}
+
+body > button {
+  background-color: goldenrod;
+  box-shadow: rgba(255, 255, 255, 0.3) 30px 30px 40px inset, rgb(46, 45, 45) -2px -2px inset;
+  color: #000;
+  font-size: 1.5rem;
+  outline: 0.01px solid rgba(255, 255, 255, 0.651);
+  border: none;
+  border-radius: 0.2rem;
+  padding: 2%;
+  position: relative;
+  display: block;
+  width: -moz-fit-content;
+  width: fit-content;
+  width: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  height: -webkit-fit-content;
+  margin: 5% auto;
+  margin-bottom: 2%;
+  transition: 0.2s ease all;
+}
+
+body > span {
+  display: flex;
+  row-gap: 50px;
+  background-color: goldenrod;
+  font-size: 1.2rem;
+  padding: 10px;
+  margin: auto;
+  width: -moz-fit-content;
+  width: fit-content;
+  width: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  height: -webkit-fit-content;
+  border-radius: 0.2rem;
+  color: #150E56;
+  transition: all 0.7s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+span:not(.card) > img {
+  position: relative;
+  display: inline;
+  height: 25px;
+  width: 25px;
+  margin-right: 5px;
+}
+
+@font-face {
+  font-family: harry_potter;
+  src: url("resources\fontharry-potter-fontHarryPotter-ov4z.ttf");
+}
+body > span:hover {
+  cursor: pointer;
+  scale: 1.09;
+  color: wheat;
+  box-shadow: 6px 7px 10px rgba(0, 191, 255, 0.474), -6px 7px 10px rgba(0, 191, 255, 0.474), 6px -7px 10px rgba(0, 191, 255, 0.474), -6px -7px 10px rgba(0, 191, 255, 0.474), 10px 10px 10px rgba(0, 106, 255, 0.474), -10px 10px 10px rgba(0, 106, 255, 0.474), 10px -10px 10px rgba(0, 106, 255, 0.474), -10px -10px 10px rgba(0, 106, 255, 0.474), -20px -20px 20px rgba(0, 34, 255, 0.385), -20px 20px 20px rgba(0, 34, 255, 0.385), 20px -20px 20px rgba(0, 34, 255, 0.385), 20px 20px 20px rgba(0, 34, 255, 0.385);
+}
+
+button:active {
+  opacity: 0.7;
+}
+
+button:hover {
+  scale: 1.09;
+}
+
+.deck {
+  display: flex;
+  width: -moz-fit-content;
+  width: fit-content;
+  width: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  height: -webkit-fit-content;
+  margin: auto;
+}
+
+.card {
+  border-radius: 0.7rem;
+  display: flex;
+  flex-direction: column;
+  height: 45vh;
+  padding: 2%;
+  row-gap: 2%;
+  width: 25vw;
+  margin: 0 10%;
+  margin-top: 5%;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.092);
+  background: linear-gradient(to left top, rgba(144, 132, 132, 0.629), rgba(255, 255, 255, 0.719));
+  transition: all ease 0.3s;
+  -webkit-backdrop-filter: blur(10rem);
+          backdrop-filter: blur(10rem);
+}
+
+.card:hover {
+  translate: 0 -10px 0;
+  scale: 1.01;
+  background: linear-gradient(to left top, rgba(144, 132, 132, 0.629), rgb(255, 255, 255));
+}
+
+.card:hover img {
+  rotate: 1turn;
+  transition: all 0.4s ease;
+  -webkit-animation: roate_1 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
+          animation: roate_1 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
+  scale: 1.4;
+}
+
+@-webkit-keyframes rotate_1 {
+  0% {
+    rotate: 0;
+    scale: 1;
+  }
+  100% {
+    rotate: 1turn;
+    scale: 1.4;
+  }
+}
+
+@keyframes rotate_1 {
+  0% {
+    rotate: 0;
+    scale: 1;
+  }
+  100% {
+    rotate: 1turn;
+    scale: 1.4;
+  }
+}
+a {
+  background-color: #000;
+}
+
+.card > h1 {
+  font-size: 2.5rem;
+  color: #000;
+  margin-left: 5%;
+  text-shadow: rgba(255, 255, 255, 0.607) 2px 2px 10px;
+}
+
+footer {
+  color: #fff;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+footer a {
+  background: none;
+  color: #fff;
+  text-decoration: none;
+}
+
+body > h1 {
+  font-size: 5rem;
+  display: block;
+  width: -moz-fit-content;
+  width: fit-content;
+  width: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  height: -webkit-fit-content;
+  margin: 2% auto;
+  color: gold;
+  text-shadow: unset rgba(57, 14, 86, 0.3254901961) 5px;
+}
+
+.card > img {
+  transition: all 0.4s ease;
+}
+
+.card::before {
+  height: 20px;
+  width: 20px;
+  border-radius: 10rem;
+  content: "";
+  box-shadow: 2px 2px 20px rgba(255, 217, 0, 0.566), -2px -2px 20px rgba(255, 217, 0, 0.566);
+  background-color: rgba(255, 255, 255, 0.57);
+  position: absolute;
+  top: -60px;
+  left: -50%;
+  transition: all 35s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  -webkit-animation: balls cubic-bezier(0.175, 0.885, 0.32, 1.275) 35s infinite;
+          animation: balls cubic-bezier(0.175, 0.885, 0.32, 1.275) 35s infinite;
+}
+
+.card_1::before {
+  transition: all 40s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  -webkit-animation: balls cubic-bezier(0.175, 0.885, 0.32, 1.275) 40s infinite;
+          animation: balls cubic-bezier(0.175, 0.885, 0.32, 1.275) 40s infinite;
+}
+
+@-webkit-keyframes balls {
+  0% {
+    translate: 0;
+  }
+  20% {
+    translate: -400px 500px;
+  }
+  30% {
+    translate: -400px -100px;
+  }
+  50% {
+    translate: 100px 500px;
+  }
+  60% {
+    translate: 400px -200px;
+  }
+  70% {
+    translate: 770px 0;
+  }
+  90% {
+    translate: 600px 500px;
+  }
+  100% {
+    translate: 0;
+  }
+}
+
+@keyframes balls {
+  0% {
+    translate: 0;
+  }
+  20% {
+    translate: -400px 500px;
+  }
+  30% {
+    translate: -400px -100px;
+  }
+  50% {
+    translate: 100px 500px;
+  }
+  60% {
+    translate: 400px -200px;
+  }
+  70% {
+    translate: 770px 0;
+  }
+  90% {
+    translate: 600px 500px;
+  }
+  100% {
+    translate: 0;
+  }
+}
+.card > img:nth-of-type(2) {
+  display: block;
+  margin: auto;
+}
+
+.popup {
+  content: "";
+  position: absolute;
+  z-index: 10;
+  height: 250px;
+  width: 500px;
+  display: block;
+  background-color: goldenrod;
+  box-shadow: rgba(255, 255, 255, 0.3) 30px 30px 40px inset, rgb(46, 45, 45) -2px -2px inset, rgba(43, 42, 42, 0.058) 4px 4px 10px;
+  top: 50%;
+  left: 50%;
+  border-radius: 0.2rem;
+  translate: -50% -50%;
+  scale: 1.7;
+  transition: all 1s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  -webkit-animation: move-down 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+          animation: move-down 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.popup::before {
+  z-index: 9;
+  opacity: 1;
+  position: absolute;
+  height: 105vh;
+  width: 100vw;
+  content: "";
+  background-color: rgba(255, 255, 255, 0.268);
+  translate: -50% -50%;
+  -webkit-animation: popup_before 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+          animation: popup_before 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@-webkit-keyframes move-down {
+  0% {
+    translate: 100% 100%;
+    opacity: 0;
+  }
+  100% {
+    translate: -50% -50%;
+    scale: 1.7;
+    opacity: 1;
+  }
+}
+
+@keyframes move-down {
+  0% {
+    translate: 100% 100%;
+    opacity: 0;
+  }
+  100% {
+    translate: -50% -50%;
+    scale: 1.7;
+    opacity: 1;
+  }
+}
+@-webkit-keyframes popup_before {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes popup_before {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.poup_btn {
+  height: 100px;
+  width: 100px;
+  border-radius: 2rem;
+  position: absolute;
+  padding: 1%;
+}
+
+.card::before:hover {
+  translate: 100vw 100vh;
+}/*# sourceMappingURL=main.css.map */
