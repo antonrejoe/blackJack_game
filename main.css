@@ -131,7 +131,7 @@ button:hover {
   border-radius: 0.7rem;
   display: flex;
   flex-direction: column;
-  height: 45vh;
+  height: 300px;
   padding: 2%;
   row-gap: 2%;
   width: 25vw;
@@ -216,8 +216,15 @@ body > h1 {
   text-shadow: unset rgba(57, 14, 86, 0.3254901961) 5px;
 }
 
-.card > img {
+.card > img:not(.card > img:nth-type(2)) {
   transition: all 0.4s ease;
+  height: 5vh;
+  width: 5vw;
+}
+
+.card > img:nth-of-type(2) {
+  height: 10vh;
+  width: 10vw;
 }
 
 .card::before {
@@ -303,7 +310,7 @@ body > h1 {
   content: "";
   position: absolute;
   z-index: 10;
-  height: 30vh;
+  height: 200px;
   width: 20vw;
   display: block;
   background-color: goldenrod;
@@ -322,8 +329,8 @@ body > h1 {
   z-index: 9;
   opacity: 1;
   position: absolute;
-  height: 105vh;
-  width: 100vw;
+  width: 10000px;
+  height: var(--windowHeight);
   content: "";
   background-color: rgba(255, 255, 255, 0.268);
   translate: -50% -50%;
@@ -402,8 +409,7 @@ body > h1 {
   top: 35%;
   translate: -50% -50%;
   transition: all cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.5s;
-  padding: 0%;
-  background: url(`img/reload.svg`);
+  background: url(imgreload.svg);
   border: none;
   outline: none;
 }
@@ -435,8 +441,6 @@ body > h1 {
   }
 }
 .reload_btn_span > img {
-  height: 65px;
-  width: 65px;
   -webkit-animation: rotate_2 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
           animation: rotate_2 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
@@ -451,11 +455,7 @@ body > h1 {
     margin: 3.5% auto;
   }
   .popup {
-    height: 28vh;
     width: 45vw;
-  }
-  .popup::before {
-    width: 108vw;
   }
 }
 @media (min-width: 600px) and (max-width: 800px) {
@@ -471,9 +471,6 @@ body > h1 {
     height: 27vh;
     width: 42vw;
   }
-  .popup::before {
-    width: 108vw;
-  }
 }
 @media (min-width: 800px) and (max-width: 1000px) {
   .card {
@@ -488,9 +485,6 @@ body > h1 {
     height: 30vh;
     width: 35vw;
   }
-  .popup::before {
-    width: 108vw;
-  }
 }
 @media (min-width: 1000px) and (max-width: 1200px) {
   .card {
@@ -502,12 +496,7 @@ body > h1 {
     margin: 7% auto;
   }
   .popup {
-    height: 25vh;
     width: 25vw;
-  }
-  .popup::before {
-    width: 108vw;
-    height: 150vh;
   }
 }
 @media (min-width: 1200px) and (max-width: 1400px) {
@@ -522,9 +511,5 @@ body > h1 {
   .popup {
     height: 25vh;
     width: 25vw;
-  }
-  .popup::before {
-    width: 108vw;
-    height: 150vh;
   }
 }/*# sourceMappingURL=main.css.map */

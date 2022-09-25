@@ -154,13 +154,18 @@ document.querySelector('button:not(.magic)').addEventListener('click',function (
 
             let reload_btn = document.createElement('span');
             reload_btn.classList.add('reload_btn_span')
-            reload_btn.innerHTML = `<img src = "img/reload.svg">`
+            reload_btn.innerHTML = `<img class="reload_icon" style="width:60px; height:60px;"  src = "img/reload.svg">`
             pop_up.appendChild(reload_btn);
             document.documentElement.appendChild(pop_up);
-            document.querySelector('body > button:not(.magic)').style.translate = '100vw';
+            let btns = document.querySelectorAll('body > button')
+            btns.forEach(element => {
+                element.style.translate = '100vw';
+            
+            });
+
             let fail = new Audio(`audio/fail.mp3`);
             fail.play();
-            reload_btn.addEventListener('click',function () {
+            document.querySelector('.reload_icon').addEventListener('click',function () {
     
                 location.reload();
             
@@ -169,7 +174,7 @@ document.querySelector('button:not(.magic)').addEventListener('click',function (
         } if(sum == 21  ) {
             console.log('u won');
 
-                    let pop_up = document.createElement('div');
+            let pop_up = document.createElement('div');
             pop_up.classList.add('popup');
             pop_up.innerText = 'Try again';
             pop_up.style.transition = 'all 1s cubic-bezier(0.68, -0.55, 0.265, 1.55)';
@@ -178,12 +183,17 @@ document.querySelector('button:not(.magic)').addEventListener('click',function (
 
             let reload_btn = document.createElement('span');
             reload_btn.classList.add('reload_btn_span')
-            reload_btn.innerHTML = `<img src = "img/reload.svg">`
+            reload_btn.innerHTML = `<img class="reload_icon" style="width:60px; height:60px;"  src = "img/reload.svg">`
             pop_up.appendChild(reload_btn);
             document.documentElement.appendChild(pop_up);
-            document.querySelector('body > button:not(.magic)').style.translate = '100vw';
+            let btns = document.querySelectorAll('body > button')
+
+            btns.forEach(element => {
+                element.style.translate = '100vw';
             
-            reload_btn.addEventListener('click',function () {
+            });
+            
+            document.querySelector('.reload_icon').addEventListener('click',function () {
 
                 location.reload();
             
@@ -221,20 +231,25 @@ document.querySelector('button:not(.magic)').addEventListener('click',function (
 
     pop_up.innerHTML = '<span class="cross_btn"></span><span class="popup_msg" >You won !!</span>'
 
-    let reload_btn = document.createElement('span');
+    let reload_btn = document.createElement('button');
     reload_btn.classList.add('reload_btn_span')
-    reload_btn.innerHTML = `<img src = "img/reload.svg">`
+    reload_btn.innerHTML = `<img class="reload_icon" style="width:60px; height:60px;"  src = "img/reload.svg">`
     pop_up.appendChild(reload_btn);
+  
+    
     document.documentElement.appendChild(pop_up);
-    let fail = new Audio(`audio/fail.mp3`);
-    fail.play();
-    reload_btn.addEventListener('click',function () {
+    
+    document.querySelector('.popup > button').addEventListener('click',function () {
 
         location.reload();
     
     });
+    let btns = document.querySelectorAll('body > button')
     
-    document.querySelector('body > button:not(.magic)').style.translate = '100vw';
+    btns.forEach(element => {
+        element.style.translate = '100vw';
+    
+    });
     
     var magic = new Audio(`audio/mixkit-horror-bell-cartoon-transition-598.wav`);
     
@@ -245,4 +260,6 @@ document.querySelector('button:not(.magic)').addEventListener('click',function (
 
 
 
+
+let windowHeight = window.innerHeight;
 
